@@ -57,7 +57,7 @@ const Word = ({id, options, go}) => {
   return(
     <Panel id={id}>
       <PanelHeader left={<PanelHeaderBack onClick={() => go('home', {})} />}>
-        Синонимы и антонимы
+        Синонимы и антонимы — TextOn.me
       </PanelHeader>
       <SearchHeader go={go} />
 

@@ -21,7 +21,7 @@ const POPULAR = [
 const Home = ({ id, go }) => {
   return(
     <Panel id={id}>
-      <PanelHeader>Синонимы и антонимы</PanelHeader>
+      <PanelHeader>Синонимы и антонимы — TextOn.me</PanelHeader>
       <SearchHeader go={go} />
       <Group header={<Header mode="secondary">Часто ищут</Header>}>
         {POPULAR.map((item) => (

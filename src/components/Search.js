@@ -29,7 +29,7 @@ const SearchHeader = ({ go }) => {
 
   return(
     <Group separator="hide">
-      <Search placeholder="Попробуйте найти слово" value={search} onChange={findWords} after={null}/>  
+      <Search placeholder="Введите слово для поиска" value={search} onChange={findWords} after={null}/>  
       {words.length > 0 && words.map(word => <Cell onClick={() => {
         setWords([]);
         go('word', {word: word.word});
