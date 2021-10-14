@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-import { Group, Cell, Search } from "@vkontakte/vkui";
+import { Group, Cell, Card, Search } from "@vkontakte/vkui";
+
+import "./Search.css";
 
 const SearchHeader = ({ go }) => {
   const [search, setSearch] = useState("");
@@ -32,18 +34,21 @@ const SearchHeader = ({ go }) => {
         onChange={findWords}
         after={null}
       />
-      {words.length > 0 &&
-        words.map((word) => (
-          <Cell
-            onClick={() => {
-              setWords([]);
-              go("word", { word: word.word });
-            }}
-            key={word.IID}
-          >
-            {word.word}
-          </Cell>
-        ))}
+      {words.length > 0 && (
+        <Card mode="shadow" className="SearchHeader">
+          {words.map((word) => (
+            <Cell
+              onClick={() => {
+                setWords([]);
+                go("word", { word: word.word });
+              }}
+              key={word.IID}
+            >
+              <div className="SearchHeader__Word">{word.word}</div>
+            </Cell>
+          ))}
+        </Card>
+      )}
     </Group>
   );
 };

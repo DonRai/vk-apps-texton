@@ -1,0 +1,11 @@
+.SearchHeader {
+  margin: 0 12px;
+  position: absolute;
+  width: calc(100% - 24px);
+  z-index: 1;
+}
+
+.SearchHeader__Word {
+  color: var(--accent);
+  cursor: pointer;
+}
