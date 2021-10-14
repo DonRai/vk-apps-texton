@@ -13,12 +13,16 @@ const POPULAR = [
 ];
 
 const Home = ({ id, go }) => {
+  const shuffled = POPULAR.map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
   return (
     <Panel id={id}>
       <PanelHeader>Синонимы и антонимы — TextOn.me</PanelHeader>
       <SearchHeader go={go} />
       <Group header={<Header mode="secondary">Часто ищут</Header>}>
-        {POPULAR.map((item) => (
+        {shuffled.map((item) => (
           <Cell key={item.id} onClick={() => go("word", { word: item.word })}>
             <span className="LinkButton">{item.word}</span>
           </Cell>
