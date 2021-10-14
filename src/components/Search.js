@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-import Group from "@vkontakte/vkui/dist/components/Group/Group";
-import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
-import Search from "@vkontakte/vkui/dist/components/Search/Search";
+import { Group, Cell, Search } from "@vkontakte/vkui";
 
 const SearchHeader = ({ go }) => {
   const [search, setSearch] = useState("");
