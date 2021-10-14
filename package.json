@@ -14,26 +14,25 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "cross-env": "^5.2.1",
-    "gh-pages": "^3.1.0",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^3.2.3",
     "react-hot-loader": "^4.13.0",
     "react-scripts": "^4.0.3"
   },
   "dependencies": {
-    "@vkontakte/icons": "^1.85.0",
-    "@vkontakte/vk-bridge": "^2.4.1",
-    "@vkontakte/vk-miniapps-deploy": "0.0.17",
-    "@vkontakte/vkjs": "^0.20.0",
-    "@vkontakte/vkui": "^4.0.4",
+    "@vkontakte/icons": "^1.129.0",
+    "@vkontakte/vk-bridge": "^2.4.8",
+    "@vkontakte/vk-miniapps-deploy": "0.0.25",
+    "@vkontakte/vkjs": "^0.22.1",
+    "@vkontakte/vkui": "^4.18.0",
     "babel-eslint": "^10.1.0",
-    "chalk": "^2.4.2",
+    "chalk": "^4.1.2",
     "eruda": "^2.4.1",
     "eruda-code": "^2.0.0",
     "eruda-dom": "^2.0.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.14.0",
-    "react-copy-to-clipboard": "^5.0.3",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.0",
+    "react-copy-to-clipboard": "^5.0.4",
+    "react-dom": "^17.0.0"
   },
   "browserslist": {
     "production": [

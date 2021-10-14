@@ -1,13 +1,12 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
 
-import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
-import Search from '@vkontakte/vkui/dist/components/Search/Search';
+import Group from "@vkontakte/vkui/dist/components/Group/Group";
+import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
+import Search from "@vkontakte/vkui/dist/components/Search/Search";
 
 const SearchHeader = ({ go }) => {
-  const [search, setSearch] = useState('');
-	const [words, setWords] = useState([]);
+  const [search, setSearch] = useState("");
+  const [words, setWords] = useState([]);
 
   const findWords = (e) => {
     e.persist();
@@ -25,21 +24,30 @@ const SearchHeader = ({ go }) => {
     } else {
       setWords([]);
     }
-  }
+  };
 
-  return(
+  return (
     <Group separator="hide">
-      <Search placeholder="Введите слово для поиска" value={search} onChange={findWords} after={null}/>  
-      {words.length > 0 && words.map(word => <Cell onClick={() => {
-        setWords([]);
-        go('word', {word: word.word});
-      }} key={word.IID}>{word.word}</Cell>)}
+      <Search
+        placeholder="Введите слово для поиска"
+        value={search}
+        onChange={findWords}
+        after={null}
+      />
+      {words.length > 0 &&
+        words.map((word) => (
+          <Cell
+            onClick={() => {
+              setWords([]);
+              go("word", { word: word.word });
+            }}
+            key={word.IID}
+          >
+            {word.word}
+          </Cell>
+        ))}
     </Group>
-  )
-};
-
-SearchHeader.propTypes = {
-	go: PropTypes.func.isRequired,
+  );
 };
 
 export default SearchHeader;
